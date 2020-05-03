@@ -1,0 +1,58 @@
+#+TITLE: pubtest
+
+David Lindes's public bits of test code -- random snippets to test how
+things work.
+
+* What this repo is about:
+
+  The basic idea is that I capture random little bits of code that I
+  use to try out different things -- some API, a way of trying to
+  solve a problem, whatever.  It's not expected that code will be good
+  here, or best practices, or anything like that... it's just trying
+  to get proofs of concepts, or to find out how something behaves at
+  certain edge cases, or stuff like that.
+
+  I hereby release all code herein under the GPLv3 (see LICENSE for
+  further details), though I don't expect any of it to be useful for
+  anything other than learning purposes.  If you'd like a different
+  license for reasons related to pedagogy, I'm open to hearing
+  requests.  Maybe for other reasons, too, but hopefully the GPL will
+  give plenty of freedom to folks to use it to learn, which is the
+  main point of me publishing this stuff.
+
+* What's here:
+
+  For now, the following list is manually generated, so it's possible
+  it will get out of date -- feel free to navigate the source tree
+  directly to see for yourself, but here's an attempt at listing the
+  contents for the purposes of giving brief descriptions of what's
+  what:
+
+  - .github/workflows :: testing out github workflows, because github
+       prompted me to do so when I was creating this repo!
+
+  Uhh... that's actually it for this early stage, but more expected
+  shortly.
+
+* What you can expect in the future:
+
+  I have long had a repository of code in my ~~/src/test~ directory,
+  including thousands of lines of C code (in files with a median
+  length under 30 lines each), plus code in at least a dozen other
+  languages (including such relative obscurities as Postscript, Common
+  Lisp, etc., as well as more-common-these-days things like ruby,
+  python, javascript, etc.), covering a wide range of topics (from GUI
+  programming to system call details).  My hope is to eventually merge
+  some of that into this public repository, though by the nature of
+  how I built the original repo over the years, I want to make sure
+  it's all stuff that I actually own copyright on (I seem to have put
+  some other people's code in a few places), that there's nothing too
+  untoward in the comments, etc.  It doesn't have to be the best code
+  ever to be published, but I do want to have looked at it.  I don't
+  know how highly I'll prioritize this process, so... this repo may
+  stay small for a while.  Please bear with me.  That said, it is my
+  intention to put any /new/ test code I write of this sort (starting
+  from 2020-05-02 onward) into ~~/src/pubtest~, instead of
+  ~~/src/test~, so, hopefully at least new stuff will see the light of
+  day.  Hopefully, too, I'll feel inspired to share other stuff from
+  time to time.
