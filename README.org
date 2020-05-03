@@ -36,7 +36,7 @@ things work.
 
 * What you can expect in the future:
 
-  I have long had a repository of code in my ~~/src/test~ directory,
+  I have long had a repository of code in my =~/src/test= directory,
   including thousands of lines of C code (in files with a median
   length under 30 lines each), plus code in at least a dozen other
   languages (including such relative obscurities as Postscript, Common
@@ -52,7 +52,7 @@ things work.
   know how highly I'll prioritize this process, so... this repo may
   stay small for a while.  Please bear with me.  That said, it is my
   intention to put any /new/ test code I write of this sort (starting
-  from 2020-05-02 onward) into ~~/src/pubtest~, instead of
-  ~~/src/test~, so, hopefully at least new stuff will see the light of
+  from 2020-05-02 onward) into =~/src/pubtest=, instead of
+  =~/src/test=, so, hopefully at least new stuff will see the light of
   day.  Hopefully, too, I'll feel inspired to share other stuff from
   time to time.
