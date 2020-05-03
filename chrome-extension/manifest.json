@@ -1,0 +1,6 @@
+{
+    "name": "Test Chrome Extension",
+    "version": "0.0.1",
+    "description": "Following developer.chrome.com/extensions/getstarted",
+    "manifest_version": 2
+}
