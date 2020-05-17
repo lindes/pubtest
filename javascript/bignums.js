@@ -2,6 +2,16 @@
 
 // bignums.js -- find the biggest number javascript can deal with.
 
+// note: this is probably misleading!  See, e.g.:
+// https://stackoverflow.com/questions/4557509/javascript-summing-large-integers
+// https://stackoverflow.com/questions/10631494/json-parse-parses-converts-big-numbers-incorrectly
+// https://stackoverflow.com/questions/17531062/javascript-not-parsing-large-number-in-json-correctly
+
+// I may or may not bother to do future work to find the edge cases
+// systematically.  It's "well understood" where they are, in theory, so
+// it's not necessarily a priority.  On the other hand, it could be fun
+// to figure out how to find them empirically, so we'll see.  :)
+
 function main() {
     ver = process.version;
     console.log(`The biggest integer your javascript (${ver}) can manage:`, findBiggestNumber());
