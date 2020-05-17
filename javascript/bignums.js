@@ -32,10 +32,15 @@ function findBiggestNumber() {
     return arr.join('')
 }
 
-// a limited notion of validity for this purpose: is a number not
-// considered by javascript to have reached infinity:
+// our a limited notion of validity: to be valid, a "number" (as created
+// from a sequence of single digits) must:
+// 1. be considered by javascript to not be infinity
+// 2. convert to the same string we parsed it from.
 function valid(arr) {
-    return parseInt(arr.join('')) !== Infinity;
+    let digits = arr.join('');
+    let num = parseInt(digits);
+    let str = num.toString();
+    return num !== Infinity && digits === str;
 }
 
 // the biggest number composed of 1 followed by all zeroes that still
