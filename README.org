@@ -29,10 +29,13 @@ things work.
   what:
 
   - .github/workflows :: testing out github workflows, because github
-       prompted me to do so when I was creating this repo!
+    prompted me to do so when I was creating this repo!
 
-  Uhh... that's actually it for this early stage, but more expected
-  shortly.
+  - python/dump_ast :: a simple script to dump the [[https://en.wikipedia.org/wiki/Abstract_syntax_tree][Abstract Syntax
+    Tree]] of either itself, or whatever python files you specify.
+
+  Uhh... that's actually it for this early stage, but more expected to
+  be added as I find the motivation to do so.
 
 * What you can expect in the future:
 

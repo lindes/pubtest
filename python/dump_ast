@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+# dump_ast -- dump the ast for either this file, or given file(s)
+
+import ast, sys
+
+files = sys.argv
+
+# don't dump the ast for this script if other scripts are specified:
+if len(sys.argv) > 1:
+    files.pop(0)
+
+# dump each file's AST, with a little header above it:
+for file in files:
+    with open(file) as f:
+        print(f"--=> {file} <=--")
+        print(ast.dump(ast.parse(f.read()), indent=4))
