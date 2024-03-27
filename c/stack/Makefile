@@ -1,0 +1,2 @@
+PROGRAMS=dir
+include ../../.makebase

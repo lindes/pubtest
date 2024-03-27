@@ -34,6 +34,12 @@ things work.
   - python/dump_ast :: a simple script to dump the [[https://en.wikipedia.org/wiki/Abstract_syntax_tree][Abstract Syntax
     Tree]] of either itself, or whatever python files you specify.
 
+  - .makebase :: a sort of master Makefile that can get re-used with
+    just a trivial wrapper in various subdirectories.
+
+  - c/stack/dir.c :: report on which direction the stack grows on the
+    architechture this is compiled on.
+
   Uhh... that's actually it for this early stage, but more expected to
   be added as I find the motivation to do so.
 

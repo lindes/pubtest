@@ -1,0 +1,63 @@
+# .makebase -- base makefile for some simple tests.
+#
+# client Makefile should define PROGRAMS and, optionally, EXTRAPROGRAMS,
+# before an 'include' directive, and any _special_ targets it might
+# need, generally after the 'include', unless they don't want "Default"
+# to be the default target.  The rest is (hopefully) all handled herein.
+# (See, e.g., c/stack/Makefile for an example client Makefile.)
+
+# I like to always have these, in an effort to forces me to work towards
+# writing cleaner code:
+CFLAGS	+=	-Wall -Werror -pedantic
+
+# all programs to be built ('make all' or 'make testall':
+ALLPROGRAMS	= $(PROGRAMS) $(EXTRAPROGRAMS)
+
+# in caller, set XECHO to ':' to silence the test loop's usual echos:
+ECHO	= $(XECHO) echo
+
+# I use capital-D Default, so that our client Makefile can set its own
+# 'default' if they want, without collision.
+Default:	test
+
+# just build everything, no testing:
+all:	$(ALLPROGRAMS)
+
+# re-invoke make so that we can run test with all programs, instead of
+# just the standard ones (without having to duplicate all the test
+# code):
+testall:	all
+	make test PROGRAMS="$(ALLPROGRAMS)"
+
+# for test, though, one can specify a .argv file to specify arguments to
+# test with, and/or a .stdin file to give the program a predefined
+# standard input.
+# (Note: alas, I don't know a way to DRY up the argv tests.  If anyone
+# knows a way, that'll still work in a loop like this, I'd love to hear
+# about it.)
+test:	$(PROGRAMS) setup
+	DEBUG=true; export DEBUG; for p in $(PROGRAMS); do				\
+	    $(ECHO) "--> $$p `test -f $$p.argv && cat $$p.argv` <--";			\
+	    if test -f $$p.stdin; then							\
+		./$$p `test -f $$p.argv && cat $$p.argv` < $$p.stdin || exit $$?;	\
+	    else									\
+		./$$p `test -f $$p.argv && cat $$p.argv` || exit $$?;			\
+	    fi										\
+	done
+
+# setup does nothing by default, can be overridden in client Makefile
+setup:
+
+# _cleanup is just meant to be used by clean and clobber, so they can
+# share a common baseline of behavior:
+_cleanup:
+	rm -f *.o core
+	rm -rf *.dSYM
+
+# clean everything but the programs:
+clean:	_cleanup
+	@echo "Type 'make clobber' to really clean up"
+
+# clobber everything we've generated, including the programs:
+clobber:	_cleanup
+	rm -f $(ALLPROGRAMS) $(EXTRAREMOVE)
