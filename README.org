@@ -37,6 +37,9 @@ things work.
   - .makebase :: a sort of master Makefile that can get re-used with
     just a trivial wrapper in various subdirectories.
 
+  - c/libs/avl/ :: test code for a C implementation of basically
+    associative arrays (dictionaries) using [[https://adtinfo.org/][libavl]]
+
   - c/stack/dir.c :: report on which direction the stack grows on the
     architechture this is compiled on.
 
