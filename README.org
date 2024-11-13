@@ -34,6 +34,13 @@ things work.
   - python/dump_ast :: a simple script to dump the [[https://en.wikipedia.org/wiki/Abstract_syntax_tree][Abstract Syntax
     Tree]] of either itself, or whatever python files you specify.
 
+  - python/compute_week :: code for computing [[https://en.wikipedia.org/wiki/ISO_week_date][ISO week
+    identifiers]] -- note that this is trivial using strftime on a full
+    Python installation, but this was done to give an easy way to get
+    this on CircuitPython (see ~compute_week-minimal.py~ for a terse
+    copy/pastable version, or ~compute_week.py~ for a verbosely
+    commented version.)
+
   - .makebase :: a sort of master Makefile that can get re-used with
     just a trivial wrapper in various subdirectories.
 
