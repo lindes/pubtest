@@ -1,0 +1,8 @@
+* ~compute_week~ -- Compute ISO Week identifiers
+
+  Here you'll find code for computing [[https://en.wikipedia.org/wiki/ISO_week_date][ISO week identifiers]].  The code
+  in ~compute_week.py~ is commented and formatted in ways meant to
+  facilitate someone trying to understand what's going on.  The code
+  in ~compute_week-minimal.py~ is meant to give as small a bit of code
+  as possible to be able to copy/paste into some [[https://circuitpython.org/][CircuitPython]]
+  project, where [[https://docs.python.org/3/library/time.html#time.strftime][~time.strftime()~]] isn't available.
